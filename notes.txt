@@ -14,3 +14,13 @@ su pour se mettre en root
 adduser xmoreau sudo puis deco reco du user
 sudo apt-get update
 sudo apt-get uprgade
+
+SSH :
+
+sudo apt-get install SSH
+
+DHCP :
+
+dhc
+
+sudo apt-get install net-tools pour installer ifconfig
