@@ -1,0 +1,16 @@
+hostname : xemroger
+domain : rogerdomain
+root password : root
+
+usr account & pwd : xmoreau
+
+
+creation de l'utilisateur non root pendant l'instal
+
+mise a jour :
+
+installation de sudo sur debian :
+su pour se mettre en root
+adduser xmoreau sudo puis deco reco du user
+sudo apt-get update
+sudo apt-get uprgade
