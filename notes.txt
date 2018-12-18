@@ -11,16 +11,28 @@ mise a jour :
 
 installation de sudo sur debian :
 su pour se mettre en root
-adduser xmoreau sudo puis deco reco du user
+adduser xmoreau sudo puis deco reco du user (exit)
 sudo apt-get update
-sudo apt-get uprgade
+sudo apt-get upgrade
 
-SSH :
+install de vim, zsh, curl, oh-my-zsh, net-tools
 
-sudo apt-get install SSH
+SSH : modif du fichier /etc/ssh/sshd-config
 
-DHCP :
+décommenter ligne PermitRootLogin et mettre sa valeur à no -> empecher acces root avec ssh
+décommenter ligne Port et mettre sa valeur à 1990
 
-dhc
+gérer les ports sur Virtual Box ;
+setting>network>port forwarding de la VM 
+nom : ssh
+host IP : 127.0.0.1 car on bosse en local
+host port : 1990 pour ne pas passer sur le canal 22
+guest IP : 10.0.2.101 > IP de la VM
+guest port : 1990 -> choisi car anneée naissance et configuré dans sshd_config
 
-sudo apt-get install net-tools pour installer ifconfig
+Publickeys :
+
+si le dossier dans le home n'est pas créer, créer .ssh et le chmod correctement
+ssh-keygen -t rsa (-t permet de choisir rsa comme type d'encryption)
+pour transferer a la VM :
+ssh-copy-id <username>@localhost -p 1990
