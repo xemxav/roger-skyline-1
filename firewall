@@ -59,3 +59,6 @@ iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 1/second -
 
 #avoid ports scanning
 iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s -j ACCEPT
+
+#crontab -e 
+#@reboot /home/xmoreau/firewall

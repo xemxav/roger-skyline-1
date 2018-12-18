@@ -15,7 +15,7 @@ adduser xmoreau sudo puis deco reco du user (exit)
 sudo apt-get update
 sudo apt-get upgrade
 
-install de vim, zsh, curl, oh-my-zsh, net-tools
+install de vim, zsh, curl, oh-my-zsh, net-tools, mailutils (adduser USER mail)
 
 SSH : modif du fichier /etc/ssh/sshd-config
 
@@ -36,3 +36,4 @@ si le dossier dans le home n'est pas créer, créer .ssh et le chmod correctemen
 ssh-keygen -t rsa (-t permet de choisir rsa comme type d'encryption)
 pour transferer a la VM :
 ssh-copy-id <username>@localhost -p 1990
+
